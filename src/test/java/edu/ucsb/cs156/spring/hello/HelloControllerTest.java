@@ -65,4 +65,15 @@ public class HelloControllerTest {
     // TODO: Add additional tests as needed to get to 100% jacoco line coverage, and
     // 100% mutation coverage (all mutants timed out or killed)
 
+    @Test
+    public void getTeam_returns_team_with_correct_members() {
+        Team  t = Developer.getTeam();
+        assertTrue(t.getMembers().contains("Christopher L"),"Team should contain Christopher L");
+        assertTrue(t.getMembers().contains("Michael J"),"Team should contain Michael J");
+        assertTrue(t.getMembers().contains("Xinghan"),"Team should contain Xinghan");
+        assertTrue(t.getMembers().contains("Skanda"),"Team should contain Skanda");
+        assertTrue(t.getMembers().contains("Edward"),"Team should contain Edward");
+        assertTrue(t.getMembers().contains("Victor"),"Team should contain Victor");
+    }
+
 }
